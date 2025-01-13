@@ -1,11 +1,8 @@
 "use client"; // Ensure this is added to the top of the file for client-side rendering
 
-import React, { useState } from 'react';
+import React from 'react';
 
-const LengthInput = ({ defaultUnit = 'meters' }) => {
-  const [unit, setUnit] = useState(defaultUnit); // Default unit passed as a prop
-  const [value, setValue] = useState(''); // Store the input value
-
+const LengthInput = ({ value, unit, setValue, setUnit, defaultUnit = 'meters' }) => {
   const handleUnitChange = (e) => {
     setUnit(e.target.value);
   };
